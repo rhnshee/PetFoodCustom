@@ -155,7 +155,7 @@ const MyPetMeals = () => {
         />
 
         {/* Main Content */}
-        <div className="flex-1 p-6 lg:p-10 pt-[72px] lg:pl-64 mt-20 ms-12">
+        <div className="flex-1 p-6 lg:p-10 space-y-10 pt-[72px] mt-6 lg:mt-20 lg:pl-64 lg:ms-12">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-3xl font-extrabold text-gray-900 mb-2 flex items-center gap-2">

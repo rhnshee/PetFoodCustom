@@ -182,7 +182,7 @@ const FoodCustomization = () => {
       <div className="flex">
         <Sidebar isMobileMenuOpen={isMenuOpen} onNavigate={handleMobileNavigation} />
 
-        <div className="flex-1 p-6 lg:p-10 pt-[72px] lg:pl-64 mt-20 ms-12">
+        <div className="flex-1 p-6 lg:p-10 space-y-10 pt-[72px] mt-6 lg:mt-20 lg:pl-64 lg:ms-12">
           {/* Title */}
           <div className="mb-8">
             <div className="flex items-center justify-between">

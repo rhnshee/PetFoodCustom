@@ -141,7 +141,7 @@ const HelpSupport = () => {
         />
 
         {/* Main Content */}
-        <div className="flex-1 p-6 lg:p-10 pt-[72px] lg:pl-64 mt-20 ms-12">
+        <div className="flex-1 p-6 lg:p-10 space-y-10 pt-[72px] mt-6 lg:mt-20 lg:pl-64 lg:ms-12">
           <div className="mb-6 flex items-center gap-3">
             <PawPrint className="w-8 h-8 text-blue-600" />
             <div>
