@@ -77,7 +77,7 @@ export default function Onboarding() {
               <img
                 src="images/hero-pet.png"
                 alt="Happy pet with healthy food"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-lg"
+                className="w-full md:w-[90%] lg:w-[120%] mx-auto rounded-2xl shadow-lg"
               />
               <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-xl shadow-md">
                 <div className="flex items-center">
