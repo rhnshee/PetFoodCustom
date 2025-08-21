@@ -47,7 +47,7 @@ export default function Onboarding() {
       </header>
 
       {/* Welcome Section */}
-      <div className="relative w-full h-screen overflow-hidden pt-20 mb-20">
+      <div className="relative w-full min-h-[80vh] md:h-screen overflow-hidden pt-24 md:pt-20 mb-20">
         {/* Background Hero Image */}
         <img
           src="images/hero-pet.png"
@@ -55,30 +55,30 @@ export default function Onboarding() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Overlay for text readability */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-white/40"></div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto h-full px-6">
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto h-full px-6 text-center md:text-left">
           {/* Left Text Section */}
-          <div className="text-left md:w-1/2">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="md:w-1/2">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Welcome to <span className="text-blue-600">PetFoodCustom</span>
             </h1>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
               Your personal dashboard to create pet profiles, customize nutrition, 
               manage subscriptions, and track deliveries — all in one place.
             </p>
-            <div className="flex flex-wrap gap-4 mb-10">
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 justify-center md:justify-start mb-8">
               {["Multiple Pet Profiles", "Custom Meal Plans", "Easy Subscriptions", "Real-time Tracking"].map((item, idx) => (
-                <div key={idx} className="flex items-center bg-blue-50/90 px-4 py-2 rounded-full">
+                <div key={idx} className="flex items-center bg-blue-50/90 px-3 py-2 rounded-full">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                  <span className="text-sm text-blue-700">{item}</span>
+                  <span className="text-xs sm:text-sm text-blue-700">{item}</span>
                 </div>
               ))}
             </div>
             <Button 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-md"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-md"
               onClick={() => navigate("/signup")}
             >
               Get Started
@@ -86,10 +86,10 @@ export default function Onboarding() {
           </div>
         </div>
 
-        {/* Floating Badges */}
-        <div className="absolute bottom-1/4 right-10 flex flex-col-3 gap-4 z-10">
+        {/* Floating Badges (hidden on mobile) */}
+        <div className="hidden sm:flex absolute bottom-10 right-10 gap-4 z-20">
           {/* Badge 1 */}
-          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center">
+          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center w-[160px]">
             <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
               <span className="text-blue-600">✓</span>
             </div>
@@ -100,7 +100,7 @@ export default function Onboarding() {
           </div>
 
           {/* Badge 2 */}
-          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center">
+          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center w-[160px]">
             <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
               <span className="text-green-600">🐾</span>
             </div>
@@ -111,7 +111,7 @@ export default function Onboarding() {
           </div>
 
           {/* Badge 3 */}
-          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center">
+          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center w-[160px]">
             <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
               <span className="text-yellow-600">📦</span>
             </div>
@@ -122,7 +122,6 @@ export default function Onboarding() {
           </div>
         </div>
       </div>
-
 
       {/* How It Works */}
       <div className="max-w-7xl mx-auto px-6 mb-20">
