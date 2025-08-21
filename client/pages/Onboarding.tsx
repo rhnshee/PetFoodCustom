@@ -62,10 +62,10 @@ export default function Onboarding() {
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto h-full px-6 text-center md:text-left">
           {/* Left Text Section */}
           <div className="md:w-1/2">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-snug text-center md:text-left">
               Welcome to <span className="text-blue-600">PetFoodCustom</span>
             </h1>
-            <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed text-center md:text-left">
               Your personal dashboard to create pet profiles, customize nutrition, 
               manage subscriptions, and track deliveries — all in one place.
             </p>
