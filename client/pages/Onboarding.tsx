@@ -69,9 +69,18 @@ export default function Onboarding() {
               Your personal dashboard to create pet profiles, customize nutrition, 
               manage subscriptions, and track deliveries — all in one place.
             </p>
+            {/* Feature Chips */}
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 justify-center md:justify-start mb-8">
-              {["Multiple Pet Profiles", "Custom Meal Plans", "Easy Subscriptions", "Real-time Tracking"].map((item, idx) => (
-                <div key={idx} className="flex items-center bg-blue-50/90 px-3 py-2 rounded-full">
+              {[
+                "Multiple Pet Profiles",
+                "Custom Meal Plans",
+                "Easy Subscriptions",
+                "Real-time Tracking",
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center bg-blue-50/90 px-3 py-2 rounded-full"
+                >
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
                   <span className="text-xs sm:text-sm text-blue-700">{item}</span>
                 </div>
