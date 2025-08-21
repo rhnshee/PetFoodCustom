@@ -43,7 +43,7 @@ export default function Dashboard() {
     bella: {
       name: "Luna",
       image: "./images/pet-profile2.jpg",
-      formula: "Adult Formula - Salmon & Rice",
+      formula: "Adult Premium Formula - Salmon & Rice",
       dailyProgress: 100,
       dailyText: "1/2 meals",
       weeklyProgress: 90,
@@ -95,7 +95,7 @@ export default function Dashboard() {
             {/* Pet Meal Plan */}
             <Card className="lg:col-span-2 border-0 shadow-lg rounded-2xl overflow-hidden bg-gradient-to-br from-white to-blue-50/50">
               <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row items-start gap-6">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                   <div className="relative">
                     <div className="w-32 h-32 bg-gradient-to-r from-orange-100 to-amber-100 rounded-full flex items-center justify-center overflow-hidden shadow-md">
                       <img
@@ -109,7 +109,7 @@ export default function Dashboard() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-xl font-bold text-gray-900 mb-2">{pet.name}'s Meal Plan</h2>
+                    <h2 className="text-xl font-bold text-gray-900 mb-2 flex flex-col md:flex-row items-center md:items-start gap-6">{pet.name}'s Meal Plan</h2>
                     <p className="text-gray-600 mb-4">{pet.formula}</p>
                     
                     <div className="space-y-4">
