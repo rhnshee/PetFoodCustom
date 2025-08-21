@@ -17,7 +17,7 @@ export default function Onboarding() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Header */}
-      <header className="bg-white border-b border-blue-100 px-6 py-4 sticky top-0 z-10">
+      <header className="bg-white border-b border-blue-100 px-6 py-4 sticky top-0 z-10 absolute top-0 left-0 w-full z-50 bg-transparent">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-32 h-10 flex items-center justify-center">
@@ -47,53 +47,82 @@ export default function Onboarding() {
       </header>
 
       {/* Welcome Section */}
-      <div className="relative text-center mb-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 pt-12 pb-16">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="text-left md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Welcome to <span className="text-blue-600">PetFoodCustom</span>
-              </h1>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Your personal dashboard to create pet profiles, customize nutrition, 
-                manage subscriptions, and track deliveries — all in one place.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-10">
-                {["Multiple Pet Profiles", "Custom Meal Plans", "Easy Subscriptions", "Real-time Tracking"].map((item, idx) => (
-                  <div key={idx} className="flex items-center bg-blue-50 px-4 py-2 rounded-full">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                    <span className="text-sm text-blue-700">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <Button 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-md"
-                onClick={() => navigate("/signup")}
-              >
-                Get Started
-              </Button>
-            </div>
-            <div className="md:w-1/2 relative">
-              <img
-                src="images/hero-pet.png"
-                alt="Happy pet with healthy food"
-                className="w-full md:w-[90%] lg:w-[120%] mx-auto rounded-2xl shadow-lg"
-              />
-              <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-xl shadow-md">
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                    <span className="text-blue-600">✓</span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">10,000+</p>
-                    <p className="text-xs text-gray-500">Active Users</p>
-                  </div>
+      <div className="relative w-full h-screen overflow-hidden pt-20 mb-20">
+        {/* Background Hero Image */}
+        <img
+          src="images/hero-pet.png"
+          alt="Happy pet with healthy food"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-white/40"></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto h-full px-6">
+          {/* Left Text Section */}
+          <div className="text-left md:w-1/2">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Welcome to <span className="text-blue-600">PetFoodCustom</span>
+            </h1>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              Your personal dashboard to create pet profiles, customize nutrition, 
+              manage subscriptions, and track deliveries — all in one place.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-10">
+              {["Multiple Pet Profiles", "Custom Meal Plans", "Easy Subscriptions", "Real-time Tracking"].map((item, idx) => (
+                <div key={idx} className="flex items-center bg-blue-50/90 px-4 py-2 rounded-full">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                  <span className="text-sm text-blue-700">{item}</span>
                 </div>
-              </div>
+              ))}
+            </div>
+            <Button 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full shadow-md"
+              onClick={() => navigate("/signup")}
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
+
+        {/* Floating Badges */}
+        <div className="absolute bottom-1/4 right-10 flex flex-col-3 gap-4 z-10">
+          {/* Badge 1 */}
+          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center">
+            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+              <span className="text-blue-600">✓</span>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-gray-900">10,000+</p>
+              <p className="text-xs text-gray-500">Active Users</p>
+            </div>
+          </div>
+
+          {/* Badge 2 */}
+          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center">
+            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+              <span className="text-green-600">🐾</span>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-gray-900">5,000+</p>
+              <p className="text-xs text-gray-500">Pet Profiles</p>
+            </div>
+          </div>
+
+          {/* Badge 3 */}
+          <div className="bg-white/90 p-4 rounded-xl shadow-md flex items-center">
+            <div className="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+              <span className="text-yellow-600">📦</span>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-gray-900">20k+</p>
+              <p className="text-xs text-gray-500">Deliveries</p>
             </div>
           </div>
         </div>
       </div>
+
 
       {/* How It Works */}
       <div className="max-w-7xl mx-auto px-6 mb-20">
